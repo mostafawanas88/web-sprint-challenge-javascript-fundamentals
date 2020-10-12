@@ -26,14 +26,22 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
+forEach() executes the callback function once for each array element. Unlike map(), which returns a new array containing an image of the original array with elements being modified in line with the callback function, forEach always returns the value undefined and is not chainable (adding other methods on top of map such as reduce, sort or filter). 
 
 2. Explain the difference between a callback and a higher order function.
+The higher order function is the key function that takes another function (callback) as one of its parameters. For instance, .map, .reduce, .forEach and .filter are all higher order functions because they need another function to be passed into them as arguments so that they function properly. 
 
 3. What is closure?
+In its most simple form, a closure is when a function looks outward of its lexical / functional /local scope and into the global scope for context (looking for a variable or for another function (being returned inside of the main function) in order to enable it to execute)
 
 4. Describe the four rules of the 'this' keyword.
+1) Window / GLobal Object Binding: when in global scope, the value of this will be the winde/console Object (the entierity of JS)
+2) Implicit Binding: whenever a preceding dot calls a function, the object before the dot is 'this'
+3) New binding: With constructor functions, this refers to the specific instance of the object that is created and returned by the constructor. 
+4) Explicity binding: whenever we use call or apply methods, this is explicitly defined.  
 
 5. Why do we need super() in an extended class?
+super() enables the child to inherit all of its parents attributes. It allows JS to abstract away the Object.create(this,Class) syntax.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
